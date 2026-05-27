@@ -10,38 +10,56 @@
 
 <body>
 
-  <div class="container">
+<!-- INTRO -->
+<div class="intro" id="intro">
+  <h1 id="type"></h1>
+  <p>A small cinematic birthday experience 🎂</p>
+  <button onclick="startExperience()">Enter ✨</button>
+</div>
 
-    <h1>Happy Birthday Surya 🎂</h1>
+<!-- MAIN -->
+<div class="main" id="main">
 
-    <p>A small memory journey...</p>
+  <h1 class="title">Happy Birthday Surya 🎂</h1>
+  <p class="subtitle">A journey from 6th standard ✨</p>
 
-    <button onclick="start()">Open Memory ✨</button>
+  <!-- STORY MODE -->
+  <div class="story-title">🔓 Unlock Memories</div>
 
-    <div id="main" style="display:none;">
+  <div class="story-grid">
 
-      <h2>Memory Timeline</h2>
-
-      <div class="card">📖 6th Standard — First time I saw you</div>
-      <div class="card">🏏 School days — Silent admiration</div>
-      <div class="card">💭 Years passed but memory stayed</div>
-      <div class="card">💬 Few months ago — first conversation</div>
-
-      <div class="photo">
-        <img src="assets/surya.jpg" width="200">
-        <p>Jersey No. 10 🏏</p>
-      </div>
-
-      <p class="wish">
-        Wishing you happiness, success and peace always ✨
-      </p>
-
-    </div>
+    <div class="card" onclick="openMemory(1)">📖 6th Standard</div>
+    <div class="card" onclick="openMemory(2)">🏫 School Days</div>
+    <div class="card" onclick="openMemory(3)">🏏 Silent Journey</div>
+    <div class="card" onclick="openMemory(4)">💬 First Talk</div>
+    <div class="card final" onclick="openMemory(5)">✨ Final Wish</div>
 
   </div>
 
-  <script src="script.js"></script>
+  <!-- MEMORY BOX -->
+  <div id="memoryBox" class="memory-box"></div>
+
+  <!-- PHOTO -->
+  <div class="photo-card">
+    <img src="assets/surya.jpg">
+    <p>Jersey No. 10 🏏</p>
+  </div>
+
+</div>
+
+<!-- END SCREEN -->
+<div class="end-screen" id="endScreen">
+  <h1>✨ Thank You ✨</h1>
+  <p>This memory ends here…</p>
+  <h2>Happy Birthday Surya 🎂</h2>
+  <p class="sign">— A silent admirer</p>
+</div>
+
+<audio id="bgmusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
